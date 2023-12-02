@@ -10,7 +10,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy:firestore": "firebase deploy --only firestore:rules",
-    "deploy:storage": "firebase deploy --only firestore:storage"
+    "deploy:storage": "firebase deploy --only firestore:storage",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -36,7 +38,8 @@
     "semantic-ui-reset": "^2.3.1",
     "semantic-ui-table": "^2.3.1",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.0",
@@ -58,5 +61,6 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "snyk": true
 }
